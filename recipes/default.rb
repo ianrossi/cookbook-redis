@@ -4,9 +4,6 @@
 #
 # Copyright 2012, Visible Measures
 #
-include_recipe "vmc-access"
-include_recipe "vmc-yum"
-
 # Install the redis package
 package "redis"
 
