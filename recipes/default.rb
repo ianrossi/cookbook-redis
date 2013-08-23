@@ -24,7 +24,7 @@ execute "append-vm-overcommit" do
   only_if      { node[:redis][:vm_overcommit_memory] && !vm_overcommit_found }
 end
 
-template "/home/redis/conf/redis.conf" do
+template "/etc/redis/redis.conf" do
   source    "redis.conf.erb"
   owner     "redis"
   group     "redis"
