@@ -1,4 +1,4 @@
-node.default[:users]				                    = [ "vmc" ]
+node.default[:users]				                    = [ "redis" ]
 node.default[:redis][:conf_dir]                = "/etc/redis"
 node.default[:redis][:pid_file]                = "/var/run/redis.pid"
 node.default[:redis][:port]                    = 6379
@@ -7,7 +7,7 @@ node.default[:redis][:timeout]                 = 300
 node.default[:redis][:log_level]               = "notice"
 node.default[:redis][:log_file]                = "/var/log/redis/redis.log"
 node.default[:redis][:databases]               = 16
-node.default[:redis][:append_only]             = "no"
+node.default[:redis][:append_only]             = "yes"
 node.default[:redis][:append_fsync]            = "always"
 node.default[:redis][:vm_enabled]              = "no"
 node.default[:redis][:vm_swap_file]            = "/tmp/redis.swap"

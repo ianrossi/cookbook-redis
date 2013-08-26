@@ -7,3 +7,6 @@ version "1.0.0"
 
 supports 'centos'
 supports 'amazon'
+
+depends					 "vmc-access"
+depends					 "vmc-yum"
