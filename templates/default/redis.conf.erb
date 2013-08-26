@@ -247,7 +247,7 @@ maxmemory-policy <%= node[:redis][:vm_maxmemory_policy] %>
 appendonly <%= node[:redis][:append_only] %>
 
 # The name of the append only file (default: "appendonly.aof")
-appendfilename <%= node[:redis][:aof_file] %>
+# appendfilename appendonly.aof
 
 # The fsync() call tells the Operating System to actually write data on disk
 # instead to wait for more data in the output buffer. Some OS will really flush 
