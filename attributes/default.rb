@@ -1,4 +1,3 @@
-node.default[:users]				                    = [ "vmc" ]
 node.default[:redis][:conf_dir]                = "/etc/redis"
 node.default[:redis][:pid_file]                = "/var/run/redis.pid"
 node.default[:redis][:port]                    = 6379

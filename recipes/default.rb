@@ -4,14 +4,11 @@
 #
 # Copyright 2012, Visible Measures
 #
-include_recipe "vmc-access"
-include_recipe "vmc-yum"
-
 # Install the redis package
 package "redis"
 
 sysctl = "/etc/sysctl.conf"
-vm_overcommit_found = ((File.read("#{sysctl}")) =~ /vm\.overcommit_memory/) != nil
+vm_overcommit_found = ((dFile.read("#{sysctl}")) =~ /vm\.overcommit_memory/) != nil
 sysctl_text = '\n#Mod for redis\n#turn on memory over-commit\nvm.overcommit_memory=1\n'
 
 execute "uncomment-vm-overcommit" do
