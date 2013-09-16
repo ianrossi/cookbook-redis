@@ -21,6 +21,8 @@ package "redis"
 #   only_if      { node[:redis][:vm_overcommit_memory] && !vm_overcommit_found }
 # end
 
+directory "#{node["redis"]["conf_dir"]}"
+
 template "#{node["redis"]["conf_dir"]}/redis.conf" do
   source    "redis.conf.erb"
   owner     "redis"
